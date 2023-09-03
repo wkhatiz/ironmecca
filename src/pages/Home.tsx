@@ -4,6 +4,7 @@ import BannerImage from "../components/BannerImage.tsx";
 import SectionHeading from "../components/SectionHeading.tsx";
 import GymGallery from "../components/GymGallery.tsx";
 import ClassPanel from "../components/ClassPanel.tsx";
+import MembershipPanel from "../components/MembershipPanel.tsx";
 
 function Home() {
   return (
@@ -42,8 +43,44 @@ function Home() {
               />
             </li>
           </ul>
-          <SectionHeading text="Membership Levels"/>
-          
+          <SectionHeading text="Membership Levels" />
+          <ul className="flex justify-center items-center flex-col">
+            <li>
+              <MembershipPanel
+                name="Tier A"
+                price={25.34}
+                featuresList={[
+                  { name: "Gym Access", included: true },
+                  { name: "24/7 Consulting", included: true },
+                  { name: "VIP Lounge", included: false },
+                  { name: "Physiotherapy", included: false },
+                  { name: "Sauna", included: false },
+                ]}
+              />
+              <MembershipPanel
+                name="Tier B"
+                price={30.29}
+                featuresList={[
+                  { name: "Gym Access", included: true },
+                  { name: "24/7 Consulting", included: true },
+                  { name: "VIP Lounge", included: false },
+                  { name: "Physiotherapy", included: true },
+                  { name: "Sauna", included: true },
+                ]}
+              />
+              <MembershipPanel
+                name="Tier C"
+                price={100}
+                featuresList={[
+                  { name: "Gym Access", included: true },
+                  { name: "24/7 Consulting", included: true },
+                  { name: "VIP Lounge", included: true },
+                  { name: "Physiotherapy", included: true },
+                  { name: "Sauna", included: true },
+                ]}
+              />
+            </li>
+          </ul>
         </div>
       </main>
     </>
