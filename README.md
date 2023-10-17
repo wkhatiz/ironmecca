@@ -2,7 +2,7 @@
 A fake website for a gym/fitness program built using Vite, React, TailwindCSS and TypeScript. 
 
 ## Install
-Open a terminal in the folder you'd like the project to be in. Ensure you have the following installed: 
+Ensure you have the following installed: 
  - [Git](https://git-scm.com/downloads)
  - [Node.js](https://nodejs.org/en/download)
 
@@ -15,4 +15,4 @@ npm run dev
 ```
 
 ## Progress
-Currently building the Front-end using React, TypeScript and Tailwind. I'm populating state with placeholder data but once the front-end is complete I'll work on setting up a PostgreSQL DB and building a Express.js API.
+Currently building the Front-end using React, TypeScript and Tailwind. I'm populating state with placeholder data but once the front-end is complete I'll work on setting up a PostgreSQL DB and building an Express.js API.
