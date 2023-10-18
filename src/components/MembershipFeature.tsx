@@ -8,16 +8,10 @@ function MembershipFeature(props: MembershipFeaturesProps) {
   return (
     <>
       <img
-        className="w-5 h-5 inline-block mx-2"
-        src={
-          featureDetails.included
-            ? "/white-tick.png"
-            : "/white-cross.png"
-        }
+        className="w-5 h-5 inline mx-2"
+        src={featureDetails.included ? "/white-tick.png" : "/white-cross.png"}
       ></img>
-      <p className="inline-block leading-7 font-bold text-white">
-        {featureDetails.name}
-      </p>
+      <p className="inline text-white">{featureDetails.name}</p>
     </>
   );
 }

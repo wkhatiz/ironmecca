@@ -6,7 +6,7 @@ function SectionHeading(props: SectionHeadingProps) {
     const {text} = props;
 
     return (  
-        <h2 className = "w-full p-14 text-3xl font-bold ">
+        <h2 className="my-8 w-full text-center font-bold text-xl">
             {text}
         </h2>
     );

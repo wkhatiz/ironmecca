@@ -1,10 +1,10 @@
 function BannerText() {
   return (
-    <div className="w-full block p-10">
-      <h2 className=" text-5xl w-full text-center font-bold">
+    <div className="flex justify-center items-center flex-col py-10">
+      <h2 className="text-2xl font-bold text-center mb-5">
         Mecca Summer Sale. Book A Class Today
       </h2>
-      <button className="bg-red-600 py-2 w-[180px] rounded-lg text-white font-bold text-lg mx-auto block my-5 hover:bg-red-800 cursor-pointer">
+      <button className="bg-red-600 text-white p-2 rounded-md font-bold">
         Book A Class
       </button>
     </div>

@@ -6,26 +6,26 @@ type ClassPanelProp = {
 }
 
 function ClassPanel(props: ClassPanelProp) {
-    const {heading, desc, price, imgPath} = props;
+  const {heading, desc, price, imgPath} = props;
 
   return (
-    <div className="w-[1000px] h-[220px] grid grid-cols-3 grid-rows-1 my-5">
+    <>
       <img
         src={imgPath}
-        className="h-full w-full"
+        className="w-full h-[50vw] rounded-lg object-cover"
       />
-      <div className=" col-span-2">
-        <h3 className="font-bold text-2xl pt-5 px-5 pb-2">
+      <div>
+        <h3 className="w-full text-center font-bold p-1">
           {heading}
         </h3>
-        <p className="text-xl py-2 px-5">
+        <p className="w-full text-center p-1">
           {desc}
         </p>
-        <button className="bg-red-600 py-2 w-[630px] rounded-lg text-white font-bold text-lg hover:bg-red-800 cursor-pointer block mx-auto mt-5">
+        <button className="bg-red-600 text-white p-2 rounded-md font-bold w-[250px] mx-auto mt-2 block">
           Book A Session For ${price}
         </button>
       </div>
-    </div>
+    </>
   );
 }
 
