@@ -1,7 +1,6 @@
 function Header() {
   return (
     <>
-      <div className="h-16 top-0 w-full static" />
       <header className=" bg-slate-200 flex justify-between h-16 static top-0 w-full">
         <div
           id="left-header-container"
