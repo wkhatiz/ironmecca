@@ -1,5 +1,7 @@
-# [Iron Mecca](https://www.ironmecca.waledkhatiz.com)
+# Iron Mecca
 A fake website for a gym/fitness program built using Vite, React, TailwindCSS and TypeScript. 
+
+https://www.ironmecca.waledkhatiz.com
 
 ## Install
 Ensure you have the following installed: 
