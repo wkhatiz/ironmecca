@@ -30,13 +30,13 @@ function ContactMeForm() {
         />
       </div>
 
-      <div className="w-[90vw] flex items-center flex-col">
+      <div className="w-[90vw] flex items-center flex-col lg:flex-row lg:justify-between lg:w-[90%]">
         <input
           type="text"
           name="fullName"
           id="fullName"
           placeholder="Name"
-          className="w-full bg-gray-200 rounded-md p-2 mb-3"
+          className="w-full bg-gray-200 rounded-md p-2 mb-3 lg:w-[300px]"
           required
         ></input>
         <input
@@ -44,7 +44,7 @@ function ContactMeForm() {
           name="email"
           id="emailAddress"
           placeholder="Email"
-          className="w-full bg-gray-200 rounded-md p-2 mb-3"
+          className="w-full bg-gray-200 rounded-md p-2 mb-3 lg:w-[300px]"
           required
         ></input>
         <input
@@ -52,7 +52,7 @@ function ContactMeForm() {
           name="subject"
           id="subjectLine"
           placeholder="Subject"
-          className="w-full bg-gray-200 rounded-md p-2 mb-3"
+          className="w-full bg-gray-200 rounded-md p-2 mb-3 lg:w-[300px]"
           required
         ></input>
       </div>
@@ -60,7 +60,7 @@ function ContactMeForm() {
         name="body"
         id="bodyText"
         placeholder="Body"
-        className="w-[90vw] h-[200px] bg-gray-200 rounded-md p-2 resize-none scroll-auto mb-3"
+        className="w-[90vw] h-[200px] bg-gray-200 rounded-md p-2 resize-none scroll-auto mb-3 lg:w-[90%]"
         required
       ></textarea>
       <button
@@ -68,7 +68,7 @@ function ContactMeForm() {
         disabled={state.submitting}
         name="submit"
         id="submitBtn"
-        className="bg-red-600 text-white p-2 rounded-md font-bold w-[90vw]"
+        className="bg-red-600 text-white p-2 rounded-md font-bold w-[90vw] lg:w-[90%]"
       >
         Send Email
       </button>

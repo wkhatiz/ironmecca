@@ -8,11 +8,13 @@ function CoachItem(props: CoachItemProp) {
     <>
       <img
         src={coachDetails.imgPath}
-        className="w-[100px] h-[100px] rounded-[50px] inline-block"
+        className="w-[100px] h-[100px] rounded-[50px] inline-block md:w-[150px] md:h-[150px] md:rounded-[75px] md:mb-2"
       ></img>
       <div className="inline-block pl-3">
-        <h3 className="font-bold text-lg">{coachDetails.name}</h3>
-        <p>{coachDetails.desc}</p>
+        <h3 className="font-bold text-lg md:text-center">
+          {coachDetails.name}
+        </h3>
+        <p className="md:text-center">{coachDetails.desc}</p>
       </div>
     </>
   );

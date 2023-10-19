@@ -13,7 +13,7 @@ function Home() {
   return (
     <>
       <Header />
-      <main className="max-w-1100px mb-10">
+      <main className="max-w-[1100px] mb-10 block mx-auto">
         <BannerText />
         <BannerImage />
         <div>
@@ -21,7 +21,7 @@ function Home() {
           <GymGallery />
           <SectionHeading text="Olympic Level Classes" />
           <ul className="flex items-center flex-col">
-            <li className="w-[90vw] mb-5">
+            <li className="w-full mb-5 md:flex md:items-center md:justify-center">
               <ClassPanel
                 heading="Olympic Weighlifting 366/2"
                 desc="Learn to Clean, Jerk and Snatch with our team of professional weightlifting coaches."
@@ -29,7 +29,7 @@ function Home() {
                 imgPath="/olympic-weightlifting.jpg"
               />
             </li>
-            <li className="w-[90vw] mb-5">
+            <li className="w-full mb-5 md:flex md:items-center md:justify-center">
               <ClassPanel
                 heading="Powerlifting Champions Session"
                 desc="Have your Squat, Bench and Deadlift coached and corrected by IPF champions."
@@ -37,7 +37,7 @@ function Home() {
                 imgPath="/powerlifting.jpg"
               />
             </li>
-            <li className="w-[90vw]">
+            <li className="w-full md:flex md:items-center md:justify-center">
               <ClassPanel
                 heading="Cross-Fit Craziness Track"
                 desc="Be pushed to your limit with our 3 hour workout training many skills and disciplines."
@@ -47,8 +47,8 @@ function Home() {
             </li>
           </ul>
           <SectionHeading text="Membership Levels" />
-          <ul className="flex items-center flex-col">
-            <li className="w-[90vw] mb-5">
+          <ul className="flex items-center flex-col ">
+            <li className="w-[90vw] mb-5 lg:w-[90%]">
               <MembershipPanel
                 name="Tier A"
                 price={25.34}
@@ -61,7 +61,7 @@ function Home() {
                 ]}
               />
             </li>
-            <li className="w-[90vw] mb-5">
+            <li className="w-[90vw] mb-5 lg:w-[90%]">
               <MembershipPanel
                 name="Tier B"
                 price={30.29}
@@ -74,7 +74,7 @@ function Home() {
                 ]}
               />
             </li>
-            <li className="w-[90vw] mb-5">
+            <li className="w-[90vw] mb-5 lg:w-[90%]">
               <MembershipPanel
                 name="Tier C"
                 price={100}
