@@ -1,40 +1,37 @@
-function Header() {
+type headerProps = {
+  menuVisible: boolean;
+  setMenuVisible: Function;
+};
+
+function Header(props: headerProps) {
+  const { menuVisible, setMenuVisible } = props;
+
+  function menuClickHandler() {
+    setMenuVisible(menuVisible ? false : true);
+  }
+
   return (
     <>
-      <header className=" bg-slate-200 flex justify-between h-16 static top-0 w-full">
-        <div
-          id="left-header-container"
-          className="h-full flex justify-center items-center"
-        >
-          <h1 className=" text-2xl px-4 font-bold">Iron Mecca</h1>
-        </div>
-        <div
-          id="middle-header-container"
-          className="h-full flex justify-center items-center"
-        >
-          <ul className="px-4">
-            <a className="hover:text-slate-500 font-bold cursor-pointer">
-              Powerlifting
-            </a>
-          </ul>
-          <ul className="px-4">
-            <a className="hover:text-slate-500 font-bold cursor-pointer">
-              Weightlifting
-            </a>
-          </ul>
-          <ul className="px-4">
-            <a className="hover:text-slate-500 font-bold cursor-pointer">
-              Crossfit
-            </a>
-          </ul>
-        </div>
-        <div
-          id="right-header-container"
-          className="h-full flex justify-center items-center"
-        >
-          <p className=" px-4 hover:text-gray-500 font-bold cursor-pointer">
-            Placeholder
-          </p>
+      <header className="bg-slate-200 h-16 static top-0 w-full flex justify-center">
+        <div className="flex justify-between items-center w-full h-full p-2 max-w-[1600px]">
+          <div id="left-header-container">
+            <h1 className="font-bold text-xl cursor-pointer">Iron Mecca</h1>
+          </div>
+          <div id="middle-header-container">
+            <ul className="hidden">
+              <a>Powerlifting</a>
+              <a>Weightlifting</a>
+              <a>Crossfit</a>
+            </ul>
+          </div>
+          <div id="right-header-container">
+            <p
+              className="cursor-pointer hover:font-bold hover:text-gray-800"
+              onClick={menuClickHandler}
+            >
+              {menuVisible ? "Hide" : "Menu"}
+            </p>
+          </div>
         </div>
       </header>
     </>

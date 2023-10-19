@@ -1,15 +1,15 @@
 type SectionHeadingProps = {
-    text: string;
-}
+  text: string;
+};
 
 function SectionHeading(props: SectionHeadingProps) {
-    const {text} = props;
+  const { text } = props;
 
-    return (  
-        <h2 className = "w-full p-14 text-3xl font-bold ">
-            {text}
-        </h2>
-    );
+  return (
+    <h2 className="my-8 w-full text-center font-bold text-xl md:text-2xl md:text-left md:px-5">
+      {text}
+    </h2>
+  );
 }
 
 export default SectionHeading;

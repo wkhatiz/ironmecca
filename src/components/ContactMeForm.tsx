@@ -3,15 +3,11 @@ import { useForm, ValidationError } from "@formspree/react";
 function ContactMeForm() {
   const [state, handleSubmit] = useForm("mzbljgnb");
   if (state.succeeded) {
-    return (
-      <p className="w-full text-center text-2xl mb-[100px]">
-        Thank you for your e-mail!
-      </p>
-    );
+    return <p>Thank you for your e-mail!</p>;
   }
   return (
-    <form className="w-full px-[100px] mb-[100px]" onSubmit={handleSubmit}>
-      <div className="text-red-500 mb-2 font-bold">
+    <form onSubmit={handleSubmit} className="w-full flex items-center flex-col">
+      <div>
         <ValidationError
           prefix="The name field"
           field="name"
@@ -34,37 +30,37 @@ function ContactMeForm() {
         />
       </div>
 
-      <div className="w-full flex justify-between">
+      <div className="w-[90vw] flex items-center flex-col lg:flex-row lg:justify-between lg:w-[90%]">
         <input
           type="text"
           name="fullName"
           id="fullName"
-          className="w-[300px] bg-gray-300 p-2 max-w-"
           placeholder="Name"
+          className="w-full bg-gray-200 rounded-md p-2 mb-3 lg:w-[300px]"
           required
         ></input>
         <input
           type="text"
           name="email"
           id="emailAddress"
-          className="w-[300px] bg-gray-300 p-2"
           placeholder="Email"
+          className="w-full bg-gray-200 rounded-md p-2 mb-3 lg:w-[300px]"
           required
         ></input>
         <input
           type="text"
           name="subject"
           id="subjectLine"
-          className="w-[300px] bg-gray-300 p-2"
           placeholder="Subject"
+          className="w-full bg-gray-200 rounded-md p-2 mb-3 lg:w-[300px]"
           required
         ></input>
       </div>
       <textarea
         name="body"
         id="bodyText"
-        className="w-full h-[200px]  bg-gray-300 block my-5 p-2 resize-none overflow-y-scroll"
         placeholder="Body"
+        className="w-[90vw] h-[200px] bg-gray-200 rounded-md p-2 resize-none scroll-auto mb-3 lg:w-[90%]"
         required
       ></textarea>
       <button
@@ -72,7 +68,7 @@ function ContactMeForm() {
         disabled={state.submitting}
         name="submit"
         id="submitBtn"
-        className="bg-red-600 py-1 w-[180px] rounded-lg text-white font-bold text-lg block hover:bg-red-800 cursor-pointer"
+        className="bg-red-600 text-white p-2 rounded-md font-bold w-[90vw] lg:w-[90%] hover:brightness-50 cursor-pointer"
       >
         Send Email
       </button>

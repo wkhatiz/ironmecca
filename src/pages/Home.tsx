@@ -7,22 +7,26 @@ import ClassPanel from "../components/ClassPanel.tsx";
 import MembershipPanel from "../components/MembershipPanel.tsx";
 import CoachGallery from "../components/CoachGallery.tsx";
 import MerchGallery from "../components/MerchGallery.tsx";
-import SocialMedia from "../components/SocialMedia.tsx";
 import ContactMeForm from "../components/ContactMeForm.tsx";
+import Menu from "../components/Menu.tsx";
+import { useState } from "react";
 
 function Home() {
+  const [menuVisible, setMenuVisible] = useState<boolean>(false);
+
   return (
     <>
-      <Header />
-      <main>
+      <Header menuVisible={menuVisible} setMenuVisible={setMenuVisible} />
+      <Menu menuVisible={menuVisible} />
+      <main className="max-w-[1100px] mb-10 block mx-auto">
         <BannerText />
         <BannerImage />
-        <div className="max-w-[1300px] block mx-auto">
+        <div>
           <SectionHeading text="Our Amazing Gyms" />
           <GymGallery />
           <SectionHeading text="Olympic Level Classes" />
-          <ul className="flex justify-center items-center flex-col">
-            <li>
+          <ul className="flex items-center flex-col">
+            <li className="w-full mb-5 md:flex md:items-center md:justify-center">
               <ClassPanel
                 heading="Olympic Weighlifting 366/2"
                 desc="Learn to Clean, Jerk and Snatch with our team of professional weightlifting coaches."
@@ -30,7 +34,7 @@ function Home() {
                 imgPath="/olympic-weightlifting.jpg"
               />
             </li>
-            <li>
+            <li className="w-full mb-5 md:flex md:items-center md:justify-center">
               <ClassPanel
                 heading="Powerlifting Champions Session"
                 desc="Have your Squat, Bench and Deadlift coached and corrected by IPF champions."
@@ -38,7 +42,7 @@ function Home() {
                 imgPath="/powerlifting.jpg"
               />
             </li>
-            <li>
+            <li className="w-full md:flex md:items-center md:justify-center">
               <ClassPanel
                 heading="Cross-Fit Craziness Track"
                 desc="Be pushed to your limit with our 3 hour workout training many skills and disciplines."
@@ -48,8 +52,8 @@ function Home() {
             </li>
           </ul>
           <SectionHeading text="Membership Levels" />
-          <ul className="flex justify-center items-center flex-col">
-            <li>
+          <ul className="flex items-center flex-col ">
+            <li className="w-[90vw] mb-5 lg:w-[90%]">
               <MembershipPanel
                 name="Tier A"
                 price={25.34}
@@ -61,6 +65,8 @@ function Home() {
                   { name: "Sauna", included: false },
                 ]}
               />
+            </li>
+            <li className="w-[90vw] mb-5 lg:w-[90%]">
               <MembershipPanel
                 name="Tier B"
                 price={30.29}
@@ -72,6 +78,8 @@ function Home() {
                   { name: "Sauna", included: true },
                 ]}
               />
+            </li>
+            <li className="w-[90vw] mb-5 lg:w-[90%]">
               <MembershipPanel
                 name="Tier C"
                 price={100}
@@ -145,7 +153,6 @@ function Home() {
             ]}
           />
           <SectionHeading text="Contact Us" />
-          <SocialMedia />
           <ContactMeForm />
         </div>
       </main>

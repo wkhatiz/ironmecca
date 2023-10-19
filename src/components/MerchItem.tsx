@@ -1,17 +1,22 @@
 type MerchItemProp = {
-    merchDetails: {name: string, desc: string, price: number, imgPath: string}
-}
+  merchDetails: { name: string; desc: string; price: number; imgPath: string };
+};
 
 function CoachItem(props: MerchItemProp) {
-    const {merchDetails} = props;
-    return (  
-        <>
-            <img src={merchDetails.imgPath} className="w-[250px] h-[350px] object-cover"></img>
-            <h3 className="w-[250px] font-bold text-xl pt-2">{merchDetails.name}</h3>
-            <p className="w-[250px] ">{merchDetails.desc}</p>
-            <p className="w-[250px] pt-3">${merchDetails.price}</p>
-        </>
-    );
+  const { merchDetails } = props;
+  return (
+    <>
+      <img
+        src={merchDetails.imgPath}
+        className="w-[100px] h-[100px] inline-block object-cover md:w-[200px] md:h-[250px] md:mb-3"
+      ></img>
+      <div className="inline-block pl-3 max-[530px]:w-[200px]">
+        <h3 className="font-bold text-lg">{merchDetails.name}</h3>
+        <p className="block md:mb-2">{merchDetails.desc}</p>
+        <p className="block">${merchDetails.price}</p>
+      </div>
+    </>
+  );
 }
 
 export default CoachItem;

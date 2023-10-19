@@ -1,32 +1,26 @@
 function GymGallery() {
   return (
-    <ul className="w-full flex justify-around items-center">
-      <li className="w-[300px] h-[200px] mx-4 relative cursor-pointer brightness-75 hover:brightness-100">
+    <ul className="flex items-center flex-col md:flex-row md:justify-around">
+      <li className="w-[90vw] mb-5 md:w-[250px] md:mb-0 lg:w-[300px] hover:brightness-50 cursor-pointer">
         <img
           src="/deamon-street-panel.jpg"
-          className="w-full h-full object-cover rounded-lg brightness-75"
+          className="w-full h-[50vw] md:h-[150px] rounded-lg brightness-50 object-cover lg:h-[200px]"
         />
-        <p className="absolute bottom-4 right-4 font-bold text-white">
-          Deamon Street
-        </p>
+        <p className="">Deamon Street</p>
       </li>
-      <li className="w-[300px] h-[200px] mx-4 relative cursor-pointer brightness-75 hover:brightness-100">
+      <li className="w-[90vw] mb-5 md:w-[250px] md:mb-0 lg:w-[300px] hover:brightness-50 cursor-pointer">
         <img
           src="/george-street-panel.jpg"
-          className="w-full h-full object-cover rounded-lg brightness-75"
+          className="w-full h-[50vw] md:h-[150px] rounded-lg brightness-50 object-cover lg:h-[200px]"
         />
-        <p className="absolute bottom-4 right-4 font-bold text-white">
-          George Street
-        </p>
+        <p className="">George Street</p>
       </li>
-      <li className="w-[300px] h-[200px] mx-4 relative cursor-pointer brightness-75 hover:brightness-100">
+      <li className="w-[90vw] mb-5 md:w-[250px] md:mb-0 lg:w-[300px] hover:brightness-50 cursor-pointer">
         <img
           src="/cumberland-street-panel.jpg"
-          className="w-full h-full object-cover rounded-lg brightness-75"
+          className="w-full h-[50vw] md:h-[150px] rounded-lg brightness-50 object-cover lg:h-[200px]"
         />
-        <p className="absolute bottom-4 right-4 font-bold text-white">
-          Cumberland Street
-        </p>
+        <p className="">Cumberland Street</p>
       </li>
     </ul>
   );

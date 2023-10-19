@@ -1,31 +1,29 @@
 type ClassPanelProp = {
-    heading: string;
-    desc: string;
-    price: number;
-    imgPath: string;
-}
+  heading: string;
+  desc: string;
+  price: number;
+  imgPath: string;
+};
 
 function ClassPanel(props: ClassPanelProp) {
-    const {heading, desc, price, imgPath} = props;
+  const { heading, desc, price, imgPath } = props;
 
   return (
-    <div className="w-[1000px] h-[220px] grid grid-cols-3 grid-rows-1 my-5">
+    <>
       <img
         src={imgPath}
-        className="h-full w-full"
+        className="w-full h-[50vw] md:w-[300px] md:h-[200px] md:inline-block rounded-lg object-cover lg:w-[400px] lg:h-[200px]"
       />
-      <div className=" col-span-2">
-        <h3 className="font-bold text-2xl pt-5 px-5 pb-2">
+      <div className="md:inline-block md:w-[350px] md:pl-4 lg:w-[500px]">
+        <h3 className="w-full md:w-auto md:text-left text-center font-bold p-1 lg:text-xl">
           {heading}
         </h3>
-        <p className="text-xl py-2 px-5">
-          {desc}
-        </p>
-        <button className="bg-red-600 py-2 w-[630px] rounded-lg text-white font-bold text-lg hover:bg-red-800 cursor-pointer block mx-auto mt-5">
+        <p className="w-full md:w-auto md:text-left text-center p-1">{desc}</p>
+        <button className="bg-red-600 text-white p-2 rounded-md font-bold w-[250px] mx-auto md:mx-0 mt-2 block hover:brightness-50">
           Book A Session For ${price}
         </button>
       </div>
-    </div>
+    </>
   );
 }
 
