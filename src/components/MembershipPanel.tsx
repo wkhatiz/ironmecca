@@ -10,7 +10,7 @@ function MembershipPanel(props: MembershipPanelProps) {
   const { name, price, featuresList } = props;
 
   return (
-    <div className="bg-red-600 p-4">
+    <div className="bg-red-600 p-4 hover:brightness-50 cursor-pointer">
       <div className="flex justify-between mb-2 md:mb-5">
         <h3 className="text-white font-bold text-2xl md:text-3xl">{name}</h3>
         <h3 className="text-white font-bold text-lg md:text-xl">

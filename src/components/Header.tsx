@@ -14,7 +14,9 @@ function Header() {
             </ul>
           </div>
           <div id="right-header-container">
-            <p className="cursor-pointer">Menu</p>
+            <p className="cursor-pointer hover:font-bold hover:text-gray-800">
+              Menu
+            </p>
           </div>
         </div>
       </header>

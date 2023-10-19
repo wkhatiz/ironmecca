@@ -19,7 +19,7 @@ function ClassPanel(props: ClassPanelProp) {
           {heading}
         </h3>
         <p className="w-full md:w-auto md:text-left text-center p-1">{desc}</p>
-        <button className="bg-red-600 text-white p-2 rounded-md font-bold w-[250px] mx-auto md:mx-0 mt-2 block">
+        <button className="bg-red-600 text-white p-2 rounded-md font-bold w-[250px] mx-auto md:mx-0 mt-2 block hover:brightness-50">
           Book A Session For ${price}
         </button>
       </div>

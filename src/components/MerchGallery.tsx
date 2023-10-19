@@ -11,7 +11,7 @@ function CoachGallery(props: MerchGalleryProps) {
       {merchList.map((merchDetails, index) => (
         <li
           key={index}
-          className="w-[90vw] flex items-center md:flex-col md:w-[200px] md:h-[420px] md:bg-transparent md:mb-0 mb-5 last:mb-0 bg-gray-200 p-3 rounded-md"
+          className="w-[90vw] flex items-center md:flex-col md:w-[200px] md:h-[420px] md:bg-transparent md:mb-0 mb-5 last:mb-0 bg-gray-200 p-3 rounded-md hover:brightness-75 hover:bg-gray-100 cursor-pointer"
         >
           <MerchItem merchDetails={merchDetails} />
         </li>

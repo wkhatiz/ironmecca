@@ -68,7 +68,7 @@ function ContactMeForm() {
         disabled={state.submitting}
         name="submit"
         id="submitBtn"
-        className="bg-red-600 text-white p-2 rounded-md font-bold w-[90vw] lg:w-[90%]"
+        className="bg-red-600 text-white p-2 rounded-md font-bold w-[90vw] lg:w-[90%] hover:brightness-50 cursor-pointer"
       >
         Send Email
       </button>
