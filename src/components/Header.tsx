@@ -1,4 +1,15 @@
-function Header() {
+type headerProps = {
+  menuVisible: boolean;
+  setMenuVisible: Function;
+};
+
+function Header(props: headerProps) {
+  const { menuVisible, setMenuVisible } = props;
+
+  function menuClickHandler() {
+    setMenuVisible(menuVisible ? false : true);
+  }
+
   return (
     <>
       <header className="bg-slate-200 h-16 static top-0 w-full flex justify-center">
@@ -14,8 +25,11 @@ function Header() {
             </ul>
           </div>
           <div id="right-header-container">
-            <p className="cursor-pointer hover:font-bold hover:text-gray-800">
-              Menu
+            <p
+              className="cursor-pointer hover:font-bold hover:text-gray-800"
+              onClick={menuClickHandler}
+            >
+              {menuVisible ? "Hide" : "Menu"}
             </p>
           </div>
         </div>
