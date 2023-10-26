@@ -8,16 +8,11 @@ import MembershipPanel from "../components/MembershipPanel.tsx";
 import CoachGallery from "../components/CoachGallery.tsx";
 import MerchGallery from "../components/MerchGallery.tsx";
 import ContactMeForm from "../components/ContactMeForm.tsx";
-import Menu from "../components/Menu.tsx";
-import { useState } from "react";
 
 function Home() {
-  const [menuVisible, setMenuVisible] = useState<boolean>(false);
-
   return (
     <>
-      <Header menuVisible={menuVisible} setMenuVisible={setMenuVisible} />
-      <Menu menuVisible={menuVisible} />
+      <Header />
       <main className="max-w-[1100px] mb-10 block mx-auto">
         <BannerText />
         <BannerImage />

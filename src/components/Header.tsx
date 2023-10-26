@@ -1,13 +1,12 @@
-type headerProps = {
-  menuVisible: boolean;
-  setMenuVisible: Function;
-};
+import { useState } from "react";
 
-function Header(props: headerProps) {
-  const { menuVisible, setMenuVisible } = props;
+function Header() {
+  let [menuHiddenClass, setMenuHiddenClass] = useState<string>(
+    "translate-y-[-300px]"
+  );
 
   function menuClickHandler() {
-    setMenuVisible(menuVisible ? false : true);
+    setMenuHiddenClass(menuHiddenClass ? "" : "translate-y-[-300px]");
   }
 
   return (
@@ -25,15 +24,31 @@ function Header(props: headerProps) {
             </ul>
           </div>
           <div id="right-header-container">
-            <p
-              className="cursor-pointer hover:font-bold hover:text-gray-800"
+            <a
+              className="cursor-pointer hover:font-bold hover:text-gray-800 decoration-transparent"
               onClick={menuClickHandler}
             >
-              {menuVisible ? "Hide" : "Menu"}
-            </p>
+              {menuHiddenClass ? "Menu" : "Hide"}
+            </a>
           </div>
         </div>
       </header>
+      {/* above is the jsx for the header. below is the jsx for the dropdown nav menu*/}
+      <nav
+        className={`fixed w-[75vw] ${menuHiddenClass} transition-transform translate-x-[15%] bg-slate-700 block mx-auto rounded-lg`}
+      >
+        <ul>
+          <li className="text-white text-lg p-3 pl-5 w-full hover:bg-slate-500 hover:font-bold cursor-pointer">
+            <a>Option A</a>
+          </li>
+          <li className="text-white text-lg p-3 pl-5 w-full hover:bg-slate-500 hover:font-bold cursor-pointer">
+            <a>Option B</a>
+          </li>
+          <li className="text-white text-lg p-3 pl-5 w-full hover:bg-slate-500 hover:font-bold cursor-pointer">
+            <a>Option C</a>
+          </li>
+        </ul>
+      </nav>
     </>
   );
 }
