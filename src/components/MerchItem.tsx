@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 type MerchItemProp = {
   merchDetails: { name: string; desc: string; price: number; imgPath: string };
 };
@@ -5,7 +7,7 @@ type MerchItemProp = {
 function CoachItem(props: MerchItemProp) {
   const { merchDetails } = props;
   return (
-    <>
+    <Link to="checkout">
       <img
         src={merchDetails.imgPath}
         className="w-[100px] h-[100px] inline-block object-cover md:w-[200px] md:h-[250px] md:mb-3"
@@ -15,7 +17,7 @@ function CoachItem(props: MerchItemProp) {
         <p className="block md:mb-2">{merchDetails.desc}</p>
         <p className="block">${merchDetails.price}</p>
       </div>
-    </>
+    </Link>
   );
 }
 

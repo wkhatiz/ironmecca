@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Header() {
   let [menuHiddenClass, setMenuHiddenClass] = useState<string>(
@@ -23,13 +24,19 @@ function Header() {
               <a>Crossfit</a>
             </ul>
           </div>
-          <div id="right-header-container">
-            <a
+          <div id="right-header-container" className="flex">
+            <Link
+              to="checkout"
+              className="px-3 cursor-pointer hover:font-bold hover:text-gray-800 decoration-transparent"
+            >
+              Cart - {0}
+            </Link>
+            <p
               className="cursor-pointer hover:font-bold hover:text-gray-800 decoration-transparent"
               onClick={menuClickHandler}
             >
               {menuHiddenClass ? "Menu" : "Hide"}
-            </a>
+            </p>
           </div>
         </div>
       </header>
