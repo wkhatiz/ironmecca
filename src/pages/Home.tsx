@@ -8,6 +8,7 @@ import MembershipPanel from "../components/MembershipPanel.tsx";
 import CoachGallery from "../components/CoachGallery.tsx";
 import MerchGallery from "../components/MerchGallery.tsx";
 import ContactMeForm from "../components/ContactMeForm.tsx";
+import { coachDetailsArr } from "../utils/CoachDetails.tsx";
 
 function Home() {
   return (
@@ -89,35 +90,7 @@ function Home() {
             </li>
           </ul>
           <SectionHeading text="Coaches and Trainers" />
-          <CoachGallery
-            coachList={[
-              {
-                name: "David Clark",
-                desc: "Worlds Strongest Man",
-                imgPath: "/david-clark.jpg",
-              },
-              {
-                name: "Dominic Doe",
-                desc: "Powerlifting Superstar",
-                imgPath: "/dominic-doe.jpg",
-              },
-              {
-                name: "Emilia Smith",
-                desc: "7-time Mrs Olympia",
-                imgPath: "/emilia-smith.jpg",
-              },
-              {
-                name: "John Smith",
-                desc: "Fitness Icon",
-                imgPath: "/john-smith.jpg",
-              },
-              {
-                name: "Sarah Peters",
-                desc: "Crossfit Expert",
-                imgPath: "/sarah-peters.jpg",
-              },
-            ]}
-          />
+          <CoachGallery coachDetails={coachDetailsArr} />
           <SectionHeading text="Merchandise" />
           <MerchGallery
             merchList={[

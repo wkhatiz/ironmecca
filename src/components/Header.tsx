@@ -15,7 +15,9 @@ function Header() {
       <header className="bg-slate-200 h-16 static top-0 w-full flex justify-center">
         <div className="flex justify-between items-center w-full h-full p-2 max-w-[1600px]">
           <div id="left-header-container">
-            <h1 className="font-bold text-xl cursor-pointer">Iron Mecca</h1>
+            <Link to="/">
+              <h1 className="font-bold text-xl cursor-pointer">Iron Mecca</h1>
+            </Link>
           </div>
           <div id="middle-header-container">
             <ul className="hidden">

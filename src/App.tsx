@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./pages/Layout.tsx";
 import Home from "./pages/Home.tsx";
 import Gyms from "./pages/Gyms.tsx";
-import Trainers from "./pages/Trainers.tsx";
+import Coaches from "./pages/Coaches.tsx";
 import Schedule from "./pages/Schedule.tsx";
 import Checkout from "./pages/Checkout.tsx";
 import NoPage from "./pages/NoPage.tsx";
@@ -19,7 +19,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="gyms" element={<Gyms />} />
-          <Route path="trainers" element={<Trainers />} />
+          <Route path="coaches" element={<Coaches />} />
           <Route path="schedule" element={<Schedule />} />
           <Route path="checkout" element={<Checkout />} />
           <Route path="*" element={<NoPage />} />
