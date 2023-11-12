@@ -31,9 +31,12 @@ function Coaches() {
     <>
       <Header />
       <main className="max-w-[1100px] mb-10 block mx-auto">
-        <div id="coach_banner" className="grid grid-cols-2 grid-rows-1 pt-14">
+        <div
+          id="coach_banner"
+          className="grid grid-cols-1 grid-rows-2 lg:grid-cols-2 lg:grid-rows-1 pt-14"
+        >
           <ImageCarousel imageArr={imageArr} setImageArr={setImageArr} />
-          <div>
+          <div className=" px-5 lg:px-0 order-first lg:order-none pb-5 md:pb-0">
             <h1 className="font-bold text-4xl pb-5">
               {coachDetails.firstName} {coachDetails.lastName}
             </h1>

@@ -20,7 +20,7 @@ function ImageCarousel(props: ImageCarouselProps) {
   }
 
   return (
-    <div id="coach_image_carousel" className=" w-4/5 block mx-auto">
+    <div id="coach_image_carousel" className=" w-4/5 block m-auto">
       <img
         src={imageArr[0]}
         className=" w-full h-[300px] object-cover block mb-3 rounded-t-2xl"
@@ -29,17 +29,17 @@ function ImageCarousel(props: ImageCarouselProps) {
       <div className="w-full h-[100px] flex justify-between">
         <img
           src={imageArr[1]}
-          className="w-[140px] h-full object-cover rounded-bl-2xl hover:brightness-75 cursor-pointer"
+          className="xl:w-[140px] h-full object-cover rounded-bl-2xl hover:brightness-75 cursor-pointer lg:w-[130px] w-[30%]"
           onClick={() => handleClick(1)}
         ></img>
         <img
           src={imageArr[2]}
-          className="w-[140px] h-full object-cover hover:brightness-75 cursor-pointer"
+          className="xl:w-[140px] h-full object-cover hover:brightness-75 cursor-pointer lg:w-[130px] w-[30%]"
           onClick={() => handleClick(2)}
         ></img>
         <img
           src={imageArr[3]}
-          className="w-[140px] h-full object-cover rounded-br-2xl hover:brightness-75 cursor-pointer"
+          className="xl:w-[140px] h-full object-cover rounded-br-2xl hover:brightness-75 cursor-pointer lg:w-[130px] w-[30%]"
           onClick={() => handleClick(3)}
         ></img>
       </div>
