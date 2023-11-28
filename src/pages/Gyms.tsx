@@ -49,10 +49,7 @@ function Gyms() {
               </p>
             </div>
             <div>
-              <MapPanel
-                longitude="2.2944490979015333"
-                latitude="48.85846176099642"
-              />
+              <MapPanel businessLocation={{ lat: 51.505, lng: -0.09 }} />
             </div>
           </div>
         </div>
