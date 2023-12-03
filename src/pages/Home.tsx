@@ -9,6 +9,7 @@ import CoachGallery from "../components/CoachGallery.tsx";
 import MerchGallery from "../components/MerchGallery.tsx";
 import ContactMeForm from "../components/ContactMeForm.tsx";
 import { coachDetailsArr } from "../utils/CoachDetails.tsx";
+import { gymDetailsArr } from "../utils/GymDetails.tsx";
 
 function Home() {
   return (
@@ -19,7 +20,7 @@ function Home() {
         <BannerImage />
         <div>
           <SectionHeading text="Our Amazing Gyms" />
-          <GymGallery />
+          <GymGallery gymDetailsArr={gymDetailsArr} />
           <SectionHeading text="Olympic Level Classes" />
           <ul className="flex items-center flex-col">
             <li className="w-full mb-5 md:flex md:items-center md:justify-center">

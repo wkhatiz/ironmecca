@@ -33,7 +33,7 @@ function Coaches() {
       <main className="max-w-[1100px] mb-10 block mx-auto">
         <div
           id="coach_banner"
-          className="grid grid-cols-1 grid-rows-2 lg:grid-cols-2 lg:grid-rows-1 pt-14"
+          className="grid grid-cols-1 grid-rows-2 lg:grid-cols-2 lg:grid-rows-1 pt-7 lg:pt-14"
         >
           <ImageCarousel imageArr={imageArr} setImageArr={setImageArr} />
           <div className=" px-5 lg:px-0 order-first lg:order-none pb-5 md:pb-0">

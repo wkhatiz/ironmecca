@@ -1,6 +1,4 @@
 // MapPanel.tsx
-
-import React from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 
@@ -8,11 +6,14 @@ import "leaflet/dist/leaflet.css";
 import markerIconUrl from "leaflet/dist/images/marker-icon.png";
 import markerShadowUrl from "leaflet/dist/images/marker-shadow.png";
 
-interface MapPanelProps {
+type MapPanelProps = {
   businessLocation: { lat: number; lng: number };
-}
+  popupTxt: string;
+};
 
-const MapPanel: React.FC<MapPanelProps> = ({ businessLocation }) => {
+function MapPanel(props: MapPanelProps) {
+  let { businessLocation, popupTxt } = props;
+
   const defaultIcon = new L.Icon({
     iconUrl: markerIconUrl,
     iconRetinaUrl: markerIconUrl,
@@ -38,11 +39,11 @@ const MapPanel: React.FC<MapPanelProps> = ({ businessLocation }) => {
           position={[businessLocation.lat, businessLocation.lng]}
           icon={defaultIcon}
         >
-          <Popup>Your Business Location</Popup>
+          <Popup>{popupTxt}</Popup>
         </Marker>
       </MapContainer>
     </div>
   );
-};
+}
 
 export default MapPanel;
