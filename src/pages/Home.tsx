@@ -10,6 +10,9 @@ import MerchGallery from "../components/MerchGallery.tsx";
 import ContactMeForm from "../components/ContactMeForm.tsx";
 import { coachDetailsArr } from "../utils/CoachDetails.tsx";
 import { gymDetailsArr } from "../utils/GymDetails.tsx";
+import { merchArray } from "../utils/MerchDetails.tsx";
+import { tierArray } from "../utils/TierDetails.tsx";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -50,77 +53,24 @@ function Home() {
           </ul>
           <SectionHeading text="Membership Levels" />
           <ul className="flex items-center flex-col ">
-            <li className="w-[90vw] mb-5 lg:w-[90%]">
-              <MembershipPanel
-                name="Tier A"
-                price={25.34}
-                featuresList={[
-                  { name: "Gym Access", included: true },
-                  { name: "24/7 Consulting", included: true },
-                  { name: "VIP Lounge", included: false },
-                  { name: "Physiotherapy", included: false },
-                  { name: "Sauna", included: false },
-                ]}
-              />
-            </li>
-            <li className="w-[90vw] mb-5 lg:w-[90%]">
-              <MembershipPanel
-                name="Tier B"
-                price={30.29}
-                featuresList={[
-                  { name: "Gym Access", included: true },
-                  { name: "24/7 Consulting", included: true },
-                  { name: "VIP Lounge", included: false },
-                  { name: "Physiotherapy", included: true },
-                  { name: "Sauna", included: true },
-                ]}
-              />
-            </li>
-            <li className="w-[90vw] mb-5 lg:w-[90%]">
-              <MembershipPanel
-                name="Tier C"
-                price={100}
-                featuresList={[
-                  { name: "Gym Access", included: true },
-                  { name: "24/7 Consulting", included: true },
-                  { name: "VIP Lounge", included: true },
-                  { name: "Physiotherapy", included: true },
-                  { name: "Sauna", included: true },
-                ]}
-              />
-            </li>
+            {tierArray.map((tier, index) => (
+              <li key={index} className="w-[90vw] mb-5 lg:w-[90%]">
+                <Link key={index} to="product" state={{ itemId: tier.id }}>
+                  <MembershipPanel
+                    key={index}
+                    id={tier.id}
+                    name={tier.name}
+                    price={tier.price}
+                    featuresList={tier.featuresList}
+                  />
+                </Link>
+              </li>
+            ))}
           </ul>
           <SectionHeading text="Coaches and Trainers" />
           <CoachGallery coachDetails={coachDetailsArr} />
           <SectionHeading text="Merchandise" />
-          <MerchGallery
-            merchList={[
-              {
-                name: "Gym Towel",
-                desc: "Microfibre with integrated storage for your things",
-                price: 20.23,
-                imgPath: "/towel.jpg",
-              },
-              {
-                name: "Shaker Cup",
-                desc: "All your nutrients, shakable and ready to go",
-                price: 10.45,
-                imgPath: "/cup.jpg",
-              },
-              {
-                name: "Hoodie",
-                desc: "The one and only, pump cover for the legends",
-                price: 50.76,
-                imgPath: "/hoodie.jpg",
-              },
-              {
-                name: "Backpack",
-                desc: "Plenty of space for the towel, cop, hoodie and gear",
-                price: 100.23,
-                imgPath: "/backpack.jpg",
-              },
-            ]}
-          />
+          <MerchGallery merchList={merchArray} />
           <SectionHeading text="Contact Us" />
           <ContactMeForm />
         </div>

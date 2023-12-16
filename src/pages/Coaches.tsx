@@ -12,7 +12,7 @@ function Coaches() {
   let coachId = location.state.coachId;
   let coachDetails = getCoachDetails(coachId);
   if (coachDetails === undefined) {
-    alert("ERROR: couch id was not found");
+    alert("ERROR: coach id was not found");
     return <NoPage />;
   }
 

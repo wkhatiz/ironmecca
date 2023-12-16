@@ -1,7 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { CartContext } from "../components/CartContext";
+import { useContext } from "react";
 
 function Header() {
+  let cart = useContext(CartContext);
+
   let [menuHiddenClass, setMenuHiddenClass] = useState<string>(
     "translate-y-[-300px]"
   );
@@ -28,10 +32,10 @@ function Header() {
           </div>
           <div id="right-header-container" className="flex">
             <Link
-              to="checkout"
+              to="/cart"
               className="px-3 cursor-pointer hover:font-bold hover:text-gray-800 decoration-transparent"
             >
-              Cart - {0}
+              Cart - {cart.getTotalCount()}
             </Link>
             <p
               className="cursor-pointer hover:font-bold hover:text-gray-800 decoration-transparent"

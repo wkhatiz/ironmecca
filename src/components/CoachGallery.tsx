@@ -28,7 +28,7 @@ function CoachGallery(props: CoachGalleryProps) {
           key={index}
           className="w-[90vw] flex items-center md:flex-col md:w-[160px] md:h-[260px] md:mb-0 md:bg-transparent md:p-2 mb-5 last:mb-0 bg-gray-200 p-3 rounded-md hover:brightness-75 hover:bg-gray-100 cursor-pointer"
         >
-          <CoachItem coachDetails={coachDetails} />
+          <CoachItem key={index} coachDetails={coachDetails} />
         </li>
       ))}
     </ul>

@@ -8,15 +8,17 @@ interface CartContextType {
   removeOneFromCart: (id: string) => void;
   deleteFromCart: (id: string) => void;
   getTotalCost: () => number;
+  getTotalCount: () => number;
 }
 
-const CartContext = createContext<CartContextType>({
+export const CartContext = createContext<CartContextType>({
   items: [],
   getItemQuantity: () => 0,
   addOneToCart: () => {},
   removeOneFromCart: () => {},
   deleteFromCart: () => {},
   getTotalCost: () => 0,
+  getTotalCount: () => 0,
 });
 
 type CartProviderProps = {
@@ -93,6 +95,14 @@ export function CartProvider(props: CartProviderProps) {
     return totalCost;
   }
 
+  function getTotalCount() {
+    let sum = 0;
+    cartItems.map((cartItem) => {
+      sum += cartItem.quantity;
+    });
+    return sum;
+  }
+
   const contextValue = {
     items: cartItems,
     getItemQuantity,
@@ -100,6 +110,7 @@ export function CartProvider(props: CartProviderProps) {
     removeOneFromCart,
     deleteFromCart,
     getTotalCost,
+    getTotalCount,
   };
 
   return (
