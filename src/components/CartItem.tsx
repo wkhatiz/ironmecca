@@ -16,7 +16,12 @@ function CartItem(props: CartItemProps) {
   let cart = useContext(CartContext);
   return (
     <div className="w-[350px] h-[100px] sm:w-[600px] sm:h-[120px] border border-black rounded-lg relative m-2">
-      <button className="absolute top-2 sm:top-4 right-4 text-gray-300 hover:text-black">
+      <button
+        onClick={() => {
+          cart.deleteFromCart(itemId);
+        }}
+        className="absolute top-2 sm:top-4 right-4 text-gray-300 hover:text-black"
+      >
         delete
       </button>
       <img
