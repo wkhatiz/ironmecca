@@ -3,6 +3,7 @@ import { CartContext } from "../components/CartContext";
 import { useLocation } from "react-router-dom";
 import { useContext } from "react";
 import { getItemData } from "../utils/ItemDetails";
+import { Link } from "react-router-dom";
 import NoPage from "./NoPage";
 
 function Product() {
@@ -22,13 +23,16 @@ function Product() {
   return (
     <>
       <Header />
-      <main className="max-w-[1100px] mb-10 block mx-auto pt-5">
-        <div className="flex justify-normal items-start">
+      <main className="max-w-[600px] lg:max-w-[900px] mb-10 block mx-auto pt-5">
+        <div className="w-full h-[40px] p-2">
+          <Link to="/">Return To Home Screen</Link>
+        </div>
+        <div className="flex flex-col sm:flex-row items-center sm:justify-normal sm:items-start">
           <img
             src={itemData.imgSrc}
-            className="h-[500px] w-[500px] object-cover p-5"
+            className="h-[400px] w-[80%] sm:h-[300px] sm:w-[300px] lg:h-[500px] lg:w-[500px] object-cover p-5"
           ></img>
-          <div className="h-[500px] w-[400px] p-5">
+          <div className="w-[80%] sm:w-[300px] lg:w-[400px] p-5">
             <h1 className="pb-5 text-2xl font-bold">{itemData.title}</h1>
             <p className="pb-10">{itemData.desc}</p>
             <form>

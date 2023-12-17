@@ -15,22 +15,24 @@ function CartItem(props: CartItemProps) {
   }
   let cart = useContext(CartContext);
   return (
-    <div className="w-[600px] h-[120px] border border-black rounded-lg relative m-2">
-      <button className="absolute top-4 right-4 text-gray-300 hover:text-black">
+    <div className="w-[350px] h-[100px] sm:w-[600px] sm:h-[120px] border border-black rounded-lg relative m-2">
+      <button className="absolute top-2 sm:top-4 right-4 text-gray-300 hover:text-black">
         delete
       </button>
       <img
         src={itemData.imgSrc}
-        className="h-[100px] w-[100px] absolute top-[10px] left-3 object-cover"
+        className="h-[80px] w-[80px] sm:h-[100px] sm:w-[100px] absolute top-[10px] left-3 object-cover"
       ></img>
-      <p className="absolute left-[130px] top-4 text-xl ">{itemData?.title}</p>
-      <div className="absolute left-[130px] bottom-4">
+      <p className="absolute left-[100px] sm:left-[130px] top-2 sm:top-4 text-md sm:text-xl max-w-[170px] sm:max-w-[400px] h-[24pm] overflow-hidden whitespace-nowrap">
+        {itemData?.title}
+      </p>
+      <div className="absolute left-[100px] sm:left-[130px] bottom-2 sm:bottom-4 text-sm sm:text-md">
         <p className="mb-2">Qty: {cart.getItemQuantity(itemId)}</p>
         <button
           onClick={() => {
             cart.addOneToCart(itemId);
           }}
-          className="bg-gray-200 rounded-md w-10 mr-3"
+          className="bg-gray-200 rounded-md w-10 mr-3 h-7 sm:h-auto"
         >
           +
         </button>
@@ -38,14 +40,14 @@ function CartItem(props: CartItemProps) {
           onClick={() => {
             cart.removeOneFromCart(itemId);
           }}
-          className="bg-gray-200 rounded-md w-10"
+          className="bg-gray-200 rounded-md w-10 h-7 sm:h-auto"
         >
           -
         </button>
       </div>
-      <p className="absolute bottom-4 right-4">
-        <span className="text-gray-300">${itemData?.price} each</span> $
-        {itemData?.price * cart.getItemQuantity(itemId)}
+      <p className="absolute bottom-4 right-4 text-sm sm:text-md">
+        <span className="text-gray-300 text-xs">${itemData?.price} each</span> $
+        {(itemData?.price * cart.getItemQuantity(itemId)).toFixed(2)}
       </p>
     </div>
   );
