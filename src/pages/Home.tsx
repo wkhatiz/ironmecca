@@ -26,7 +26,7 @@ function Home() {
           <GymGallery gymDetailsArr={gymDetailsArr} />
           <SectionHeading text="Olympic Level Classes" />
           <ul className="flex items-center flex-col">
-            <li className="w-full mb-5 md:flex md:items-center md:justify-center">
+            <li className="px-5 w-full mb-5 md:flex md:items-center md:justify-center">
               <ClassPanel
                 heading="Olympic Weighlifting 366/2"
                 desc="Learn to Clean, Jerk and Snatch with our team of professional weightlifting coaches."
@@ -34,7 +34,7 @@ function Home() {
                 imgPath="/olympic-weightlifting.jpg"
               />
             </li>
-            <li className="w-full mb-5 md:flex md:items-center md:justify-center">
+            <li className="px-5 w-full mb-5 md:flex md:items-center md:justify-center">
               <ClassPanel
                 heading="Powerlifting Champions Session"
                 desc="Have your Squat, Bench and Deadlift coached and corrected by IPF champions."
@@ -42,7 +42,7 @@ function Home() {
                 imgPath="/powerlifting.jpg"
               />
             </li>
-            <li className="w-full md:flex md:items-center md:justify-center">
+            <li className="px-5 w-full md:flex md:items-center md:justify-center">
               <ClassPanel
                 heading="Cross-Fit Craziness Track"
                 desc="Be pushed to your limit with our 3 hour workout training many skills and disciplines."
