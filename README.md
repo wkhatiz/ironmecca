@@ -1,9 +1,12 @@
 # Iron Mecca
-A fake website for a gym/fitness program built using Vite, React, TailwindCSS and TypeScript. 
+A front-end application for a mock gym/fitness commercial website, built using React.js, TypeScript and TailwindCSS. This application does not have a backend and meaning refreshing the page will cause the shopping cart to clear and all other state to be lost. 
 
-https://www.ironmecca.waledkhatiz.com
+## Third Party Services
+- [OpenStreetMap API](https://www.openstreetmap.org) was used to display the location of each gym. 
+- [Formspree API](https://formspree.io) was used to handle SMTP config/outbound emails. 
+- [Stripe API](https://stripe.com) was used to the handle the checkout stage and transaction processing. TBC
 
-## Install
+## How To Run Locally
 Ensure you have the following installed: 
  - [Git](https://git-scm.com/downloads)
  - [Node.js](https://nodejs.org/en/download)
@@ -16,5 +19,3 @@ npm install
 npm run dev
 ```
 
-## Progress
-Currently building the Front-end using React, TypeScript and Tailwind. I'm populating state with placeholder data but once the front-end is complete I'll work on setting up a PostgreSQL DB and building an Express.js API.
