@@ -21,25 +21,25 @@ export const tierArray: {
   {
     id: "2",
     name: "Tier B",
-    price: 25.34,
+    price: 30.29,
     featuresList: [
       { name: "Gym Access", included: true },
       { name: "24/7 Consulting", included: true },
       { name: "VIP Lounge", included: false },
-      { name: "Physiotherapy", included: false },
-      { name: "Sauna", included: false },
+      { name: "Physiotherapy", included: true },
+      { name: "Sauna", included: true },
     ],
   },
   {
     id: "3",
     name: "Tier C",
-    price: 25.34,
+    price: 100.0,
     featuresList: [
       { name: "Gym Access", included: true },
       { name: "24/7 Consulting", included: true },
-      { name: "VIP Lounge", included: false },
-      { name: "Physiotherapy", included: false },
-      { name: "Sauna", included: false },
+      { name: "VIP Lounge", included: true },
+      { name: "Physiotherapy", included: true },
+      { name: "Sauna", included: true },
     ],
   },
 ];
