@@ -1,5 +1,5 @@
 # Iron Mecca
-A front-end application for a mock gym/fitness commercial website, built using React.js, TypeScript and TailwindCSS. This application does not have a backend and meaning refreshing the page will cause the shopping cart to clear and all other state to be lost. 
+A front-end application for a mock gym/fitness commercial website, built using React.js, TypeScript and TailwindCSS. This application does not have a backend, meaning refreshing the page will cause the shopping cart to clear and all other state to be lost. 
 
 ## Third Party Services
 - [OpenStreetMap API](https://www.openstreetmap.org) was used to display the location of each gym. 
